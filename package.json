@@ -1,12 +1,21 @@
 {
-  "name": "tec-monterrey",
+  "name": "nombredelproyecto",
   "version": "1.0.0",
   "description": "",
+  "main": "Gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "author": "",
   "license": "ISC",
-  "devDependencies": {
+  "dependencies": {
     "gulp": "^3.9.1",
     "gulp-minify-css": "^1.2.4",
-    "gulp-sass": "^2.3.2"
+    "gulp-sass": "^3.1.0"
+  },
+  "devDependencies": {
+    "gulp-imagemin": "^4.0.0",
+    "gulp-include": "^2.3.1",
+    "gulp-minify": "^2.1.0"
   }
 }
