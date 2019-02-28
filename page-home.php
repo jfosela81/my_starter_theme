@@ -5,7 +5,7 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-	</div><!-- .content-area -->
-
+<section>
+	<p>Home</p>
+</section>
 <?php get_footer(); ?>
