@@ -8,7 +8,7 @@
 Thumbs.db
 .htaccess
 
-# Gulp modules
+# Node modules
 node_modules
 
 # wordpress specific
