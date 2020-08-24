@@ -5,7 +5,7 @@ var sass = require('gulp-sass');
 gulp.task('default', ['styles']);
 
 gulp.task('styles', function () {
-    return gulp.src('./sass/style-landing.scss')
+    return gulp.src('./sass/style.scss')
         .pipe(sass({outputStyle: 'compressed'})
             .on('error', sass.logError)
         )
