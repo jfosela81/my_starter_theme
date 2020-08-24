@@ -7,11 +7,14 @@
  * Time: 14:06
  */
 
-get_header('maintenance');
+get_header( 'maintenance' );
 
-if (have_posts()) {
+if ( have_posts() ) {
+    
     the_post();
+    
     ?>
+
     <div style="background-image:url('<?=get_the_post_thumbnail_url('full')?>'); background-size:contain; background-position:center; height:100vh; background-repeat:no-repeat;">
     </div>
 
@@ -19,4 +22,4 @@ if (have_posts()) {
 
 }
 
-get_footer('maintenance');
+get_footer( 'maintenance' );

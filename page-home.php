@@ -3,9 +3,12 @@
  * Template Name: Homepage
  */
 
-get_header(); ?>
+get_header(); 
+
+?>
 
 <section>
 	<p>Home</p>
 </section>
-<?php get_footer(); ?>
+
+<?php get_footer();

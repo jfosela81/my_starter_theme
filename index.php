@@ -9,15 +9,16 @@
  *
  * @link http://codex.wordpress.org/Template_Hierarchy
  *
- * @package WordPress
- * @subpackage Twenty_Sixteen
- * @since Twenty Sixteen 1.0
  */
 
-get_header(); ?>
+get_header(); 
+
+?>
 
 	<div id="primary" class="content-area">
 		INDEX
 	</div><!-- .content-area -->
 
-<?php get_footer(); ?>
+<?php 
+
+get_footer();

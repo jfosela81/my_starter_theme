@@ -1,12 +1,6 @@
 <?php
 /**
  * The template for displaying the header
- *
- * Displays all of the head element and everything up until the "site-content" div.
- *
- * @package WordPress
- * @subpackage Twenty_Sixteen
- * @since Twenty Sixteen 1.0
  */
 
 ?><!DOCTYPE html>
@@ -23,29 +17,27 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<div class="site-inner">
-		<header id="masthead" class="site-header" role="banner">
+	
+	<header id="masthead" class="site-header" role="banner">
 
-			<div class="site-header-main">
+		<div class="site-header-main">
 
-				<div class="site-branding">
-				</div><!-- .site-branding -->
+			<div class="site-branding">
+			</div><!-- .site-branding -->
 
-				<?php if ( has_nav_menu( 'header-menu' ) ) { ?>
-					<div id="site-header-menu" class="site-header-menu">
-						<nav id="site-navigation" class="main-navigation" role="navigation">
-							<?php
-							wp_nav_menu( array(
-								'theme_location' => 'header-menu',
-								'menu_class'     => 'primary-menu',
-							) );
-							?>
-						</nav><!-- .main-navigation -->
-					</div><!-- .site-header-menu -->
-				<?php } ?>
+			<?php if ( has_nav_menu( 'header-menu' ) ) { ?>
+				<nav id="site-navigation" class="main-navigation" role="navigation">
+					<?php
+						wp_nav_menu( array(
+							'theme_location' => 'header-menu',
+							'menu_class'     => 'primary-menu',
+						) );
+					?>
+				</nav><!-- .main-navigation -->
+			<?php } ?>
 
-			</div><!-- .site-header-main -->
+		</div><!-- .site-header-main -->
 
-		</header><!-- .site-header -->
+	</header><!-- .site-header -->
 
-		<div id="content" class="site-content">
+	<div id="content" class="site-content">
