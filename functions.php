@@ -17,7 +17,7 @@ function tsa_custom_scripts() {
 
     wp_enqueue_script('fontawesome','https://use.fontawesome.com/3646182a05.js',array('jquery'));
 
-    wp_enqueue_style('fonts','https://fonts.googleapis.com/css?family=Lato|Raleway:100');
+    wp_enqueue_style('fonts','https://fonts.googleapis.com/css2?family=Lato&family=MerriweatherMerriweather:wght@300;900&display=swap');
     wp_enqueue_style('styles',get_template_directory_uri().'/style.css');
 
 }

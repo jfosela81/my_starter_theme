@@ -1,6 +1,11 @@
-$main-color: #FF0000;
+/*!
+Theme Name: My Starter Theme
+Description: WP Theme basico para desarrollo a medida
+Author: Jorge Fosela
+Author URI: https://jorgefosela.dev
+Version: 1.0
+Text domain: whatever
+*/
 
-body {
-  padding:0;
-  margin:0;
-}
+@import 'variables';
+@import 'html-elements';
