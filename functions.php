@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: imove
- * Date: 31/8/17
- * Time: 12:14
- */
 
 add_theme_support('post-thumbnails');
 add_theme_support('widgets');
@@ -12,21 +6,24 @@ add_theme_support('custom-background');
 add_theme_support('custom-header');
 add_theme_support('custom-logo');
 
-add_action('wp_enqueue_scripts','tsa_custom_scripts');
-function tsa_custom_scripts() {
+add_action('wp_enqueue_scripts','mst_custom_scripts');
+function mst_custom_scripts() {
 
-    wp_enqueue_script('fontawesome','https://use.fontawesome.com/3646182a05.js',array('jquery'));
+    wp_enqueue_script( 'fontawesome','https://kit.fontawesome.com/9f7a4566fb.js', array('jquery') );
 
-    wp_enqueue_style('fonts','https://fonts.googleapis.com/css2?family=Lato&family=Merriweather:wght@300;900&display=swap');
-    wp_enqueue_style('styles',get_template_directory_uri().'/style.css');
+    $google_fonts = 'https://fonts.googleapis.com/css2?family=Lato:wght@400;900&family=Roboto:wght@400;700&display=swap';
+    wp_register_style( 'google-fonts', $google_fonts, '', null );
+    wp_enqueue_style( 'google-fonts' );
+
+    wp_enqueue_style( 'styles',get_template_directory_uri().'/style.css' );
 
 }
 
-function register_tsa_menus() {
+function register_mst_menus() {
     register_nav_menus(
         array(
             'header-menu' => 'Menú de cabecera',
         )
     );
 }
-add_action( 'init', 'register_tsa_menus' );
+add_action( 'init', 'register_mst_menus' );
