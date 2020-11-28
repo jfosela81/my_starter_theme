@@ -7,3 +7,18 @@ $main-font: 'Roboto', sans-serif;
 $title-font: 'Roboto', serif;
 
 $row-width: 1080px;
+
+$tablet-size: 768px;
+$mobile-size: 600px;
+
+@mixin tablet {
+	@media screen and (max-width: $tablet-size) {
+		@content;
+	}
+}
+
+@mixin mobile {
+	@media screen and (max-width: $mobile-size) {
+		@content;
+	}
+}
