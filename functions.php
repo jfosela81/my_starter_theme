@@ -27,3 +27,14 @@ function register_mst_menus() {
     );
 }
 add_action( 'init', 'register_mst_menus' );
+
+/* Evitar que WP cree tamaños de imagen adicionales */
+function mst_disable_media_sizes( $sizes ) {
+	
+	unset($sizes['medium_large']); // desactivar tamaño medio-grande
+	unset($sizes['1536x1536']);    // desactivar tamaño medio-grande x2
+	unset($sizes['2048x2048']);    // desactivar tamaño grande x2
+    return $sizes;
+    
+}
+add_action('intermediate_image_sizes_advanced', 'mst_disable_media_sizes');
