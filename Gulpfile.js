@@ -1,26 +1,31 @@
+'use strict';
+
 var gulp = require('gulp');
-var sass = require('gulp-sass');
-//var include = require('gulp-include');
+var sass = require('gulp-sass')(require('sass'));
+var concat = require('gulp-concat');
+var babel = require('gulp-babel');
+var uglify = require('gulp-uglify');
 
-gulp.task('default', ['styles']);
+function buildStyles() {
+  return gulp.src('./sass/style.scss')
+    .pipe(sass.sync({ outputStyle: 'compressed' }).on('error', sass.logError))
+		.pipe(concat('style.css'))
+    .pipe(gulp.dest('./'));
+};
 
-gulp.task('styles', function () {
-    return gulp.src('./sass/style.scss')
-        .pipe(sass({outputStyle: 'compressed'})
-            .on('error', sass.logError)
-        )
-        .pipe(gulp.dest('./'));
-});
-/*
-gulp.task('scripts', function() {
-    gulp.src(['./development/js/scripts.js'])
-        .pipe( include() )
-        .pipe( minify() )
-        .pipe( gulp.dest("./") );
-});
-*/
+exports.buildStyles = buildStyles;
 
-gulp.task('watch', function () {
-    gulp.watch('./sass/*.scss', ['styles'] );
-    //gulp.watch('./development/js/*.js', ['scripts'] );
-});
+function scripts() {
+  return gulp.src('./assets/js/**/*.js', { sourcemaps: true })
+    .pipe( babel() )
+    .pipe( uglify() )
+    .pipe( concat('main.min.js') )
+    .pipe( gulp.dest('./') );
+}
+
+exports.scripts = scripts;
+
+exports.watch = function () {
+  gulp.watch( './sass/**/*.scss', gulp.series( 'buildStyles' ) );
+	gulp.watch( './assets/**/*.js', scripts );
+};
