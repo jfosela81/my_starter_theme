@@ -1,0 +1,33 @@
+{
+	"name": "accordion",
+	"title": "Accordion",
+	"description": "Title + description in accordion component",
+	"style": [
+		"file:./style.css"
+	],
+	"script": "",
+	"category": "text",
+	"icon": "list-view",
+	"apiVersion": 2,
+	"keywords": [
+		"accordion"
+	],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "render.php"
+	},
+	"styles": [],
+	"supports": {
+		"align": false,
+		"anchor": false,
+		"alignContent": false,
+		"color": {
+			"text": false,
+			"background": false,
+			"link": false
+		},
+		"alignText": false,
+		"fullHeight": false
+	},
+	"attributes": {}
+}

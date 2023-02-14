@@ -1,0 +1,30 @@
+.accordion-block {
+	display: flex;
+	align-items: center;
+	padding: 17px 21px;
+	gap: 21px;
+	box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.08);
+}
+
+.accordion-block.accordion-open {
+	align-items: flex-start;
+}
+
+.accordion-block .icon-wrapper {
+	cursor: pointer;
+}
+
+.accordion-block .icon-wrapper .close-icon {
+	display: none;
+}
+
+.accordion-block .content-wrapper p.accordion-title {
+	font-weight: 600;
+	margin: 0;
+	cursor: pointer;
+}
+
+.accordion-block .content-wrapper p.accordion-description {
+	display: none;
+	margin: 10px 0 0;
+}
