@@ -13,12 +13,14 @@
 
 get_header(); 
 
-?>
+if ( have_posts() ) {
 
+	?>
 	<div id="primary" class="content-area">
-		INDEX
+		<?php echo the_content(); ?>
 	</div><!-- .content-area -->
+	<?php 
 
-<?php 
+}
 
 get_footer();
